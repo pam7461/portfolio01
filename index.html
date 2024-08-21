@@ -65,7 +65,10 @@
         }
         .header h1{
             font-weight:700;
+            font-size:22px;
             text-transform:uppercase;
+            position:relative;
+            z-index:11;
         }
         .header h1:hover{
             color:var(--sub-color);
@@ -83,19 +86,32 @@
             display:grid;
             grid-template-columns:1fr;
             align-content:space-between;
+            position:relative;
+            z-index:11;
         }
         .header .btn-nav span{
             height:2px;
             background:var(--main-color);
             text-indent:-999999px;
+            transition:0.3s;
+        }
+        .header .btn-nav.active span:nth-child(1){
+            transform:translateY(7px) rotate(45deg);
+        }
+        .header .btn-nav.active span:nth-child(2){
+            transform:scale(0);
+        }
+        .header .btn-nav.active span:nth-child(3){
+            transform:translateY(-7px) rotate(-45deg);
         }
         .header .gnb{
             position:absolute;
-            left:50%;
+            left:0;
             right:0;
             top:0;
+            z-index:10;
             height:100vh;
-            padding:16px;
+            padding:65px 16px 16px 16px;
             background:var(--sub-color);
             color:var(--main-color);
             transform:translateX(100%);
@@ -104,27 +120,22 @@
         .header .gnb.active{
             transform:translateX(0);
         }
-        .btn-nav-close{
-            font-weight:900;
-            font-size:36px;
-            text-align:right;
-            cursor:pointer;
-            transform:translateY(-20px);
-        }
+        
         .gnb ul{
             display:grid;
-            gap:1.5em;
+            column-gap:1.5em;
             font-weight:500;
             font-size:18px;
             text-transform:capitalize;
         }
         .gnb li{
-            transition:0.2s;
+            padding:16px 0;
+            text-align:center;
         }
         .gnb li:hover{
             background:var(--main-color);
             color:var(--sub-color);
-            transform:scale(1.05);
+            transform:scale(1.1);
         }
 
 
@@ -146,10 +157,7 @@
                 transform:translateX(0);
                 height:auto;
                 padding:0;
-            }
-            .btn-nav-close{
-                display:none;
-            }
+            }            
             .gnb ul{
                 grid-template-columns:repeat(6, auto);
             }
@@ -171,7 +179,7 @@
                     <span></span>
                 </div>
                 <nav class="gnb">
-                    <div class="btn-nav-close">&times;</div>
+                    <!-- <div class="btn-nav-close">&times;</div> -->
                     <ul>
                         <li><a href="#intro">home</a></li>
                         <li><a href="#about">about</a></li>
@@ -229,17 +237,14 @@
         }
 
 
-        let btnNav = document.querySelector('.btn-nav');
-        let btnNavClose = document.querySelector('.btn-nav-close');
+        let btnNav = document.querySelector('.btn-nav');        
 
         btnNav.onclick=function(){
-            let gnb = document.querySelector('.gnb');
-            setClass(gnb,'active');
+            let gnb = document.querySelector('.gnb');            
+            toggleClass(gnb,'active');
+            toggleClass(this,'active');
         }
-        btnNavClose.onclick=function(){
-            let gnb = document.querySelector('.gnb');
-            resetClass(gnb,'active');
-        }
+        
 
     </script>
 </body>
