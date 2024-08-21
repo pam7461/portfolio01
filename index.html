@@ -33,6 +33,28 @@
 
         /* SET CSS */
         /* mobile CSS */
+        @keyframes ani01 {
+            0%{
+                opacity:0.3;
+                transform:scale(1);
+            }
+            4%{
+                opacity:1;
+                transform:scale(1.1);
+            }
+            6%{
+                opacity:1;
+                transform:scale(1.1);
+            }
+            10%{
+                opacity:0.3;
+                transform:scale(1);
+            }
+            100%{
+                opacity:0.3;
+                transform:scale(1);
+            }
+        }
         :root{
             --main-color:#000;
             --sub-color:#fff;
@@ -41,6 +63,7 @@
             line-height:1.5;
             color:var(--sub-color);
             background:var(--main-color);
+            scroll-behavior:smooth;
         }
         .wrap{
             overflow:hidden;
@@ -72,7 +95,11 @@
             text-transform:uppercase;
             position:relative;
             z-index:11;
+            opacity:0.3;
+            transform:scale(1);            
+            animation: ani01 100s 0.3s infinite;
         }
+        
         .header h1:hover{
             color:var(--sub-color);
             text-shadow:
