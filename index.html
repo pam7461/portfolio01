@@ -54,6 +54,8 @@
             padding:16px 0;
             background:var(--sub-color);
             color:var(--main-color);
+            position:relative;
+            z-index:1000;
         }
         .header .container{
             display:grid;
@@ -64,6 +66,15 @@
         .header h1{
             font-weight:700;
             text-transform:uppercase;
+        }
+        .header h1:hover{
+            color:var(--sub-color);
+            text-shadow:
+                0.5px 0px 0px var(--main-color),
+                -0.5px 0px 0px var(--main-color),
+                0px 0.5px 0px var(--main-color),
+                0px -0.5px 0px var(--main-color)
+            ;
         }
         .header .btn-nav{
             cursor:pointer;
@@ -79,11 +90,42 @@
             text-indent:-999999px;
         }
         .header .gnb{
-            display:none;
+            position:absolute;
+            left:50%;
+            right:0;
+            top:0;
+            height:100vh;
+            padding:16px;
+            background:var(--sub-color);
+            color:var(--main-color);
+            /* transform:translateX(100%); */
+            transition:0.3s;
         }
-
-
-
+        .header .gnb.active{
+            transform:translateX(0);
+        }
+        .btn-nav-close{
+            font-weight:900;
+            font-size:36px;
+            text-align:right;
+            cursor:pointer;
+            transform:translateY(-20px);
+        }
+        .gnb ul{
+            display:grid;
+            gap:1.5em;
+            font-weight:500;
+            font-size:18px;
+            text-transform:capitalize;
+        }
+        .gnb li{
+            transition:0.2s;
+        }
+        .gnb li:hover{
+            background:var(--main-color);
+            color:var(--sub-color);
+            transform:scale(1.05);
+        }
 
 
         /* 768px 이상 */
@@ -100,7 +142,20 @@
                 display:none;
             }
             .header .gnb{
-                display:block;
+                position:static;
+                transform:translateX(0);
+                height:auto;
+                padding:0;
+            }
+            .btn-nav-close{
+                display:none;
+            }
+            .gnb ul{
+                grid-template-columns:repeat(6, auto);
+            }
+            .gnb li:hover{
+                background:var(--sub-color);
+                color:var(--main-color);                
             }
         }
     </style>
