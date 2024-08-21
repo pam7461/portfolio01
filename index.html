@@ -4,8 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HWANJUN Portfolio</title>
+    <style>
+        /* RESET CSS */
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight:inherit;
+            font-size:inherit;
+        }
+        a{
+            color:inherit;
+            text-decoration:none;
+        }
+        img,video{
+            width:100%;
+            vertical-align:bottom;
+        }
+        ol,ul,li{
+            list-style:none;
+        }
+        table,tr,td,th,thead,tbody,tfoot{            
+            border-collapse:collapse;
+        }
+
+
+        /* SET CSS */
+        /* mobile CSS */
+        :root{
+            --main-color:#000;
+            --sub-color:#fff;
+            font-weight:400;
+            font-size:16px;
+            line-height:1.5;
+            color:var(--sub-color);
+            background:var(--main-color);
+        }
+        .wrap{
+            overflow:hidden;
+        }
+        .container{
+            max-width:1200px;
+            margin:0 auto;
+            padding:0 16px;
+        }
+        .header{
+            padding:16px 0;
+            background:var(--sub-color);
+            color:var(--main-color);
+        }
+        .header .container{
+            display:grid;
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .header h1{
+            font-weight:700;
+            text-transform:uppercase;
+        }
+        .header .btn-nav{
+            cursor:pointer;
+            width:20px;
+            height:16px;
+            display:grid;
+            grid-template-columns:1fr;
+            align-content:space-between;
+        }
+        .header .btn-nav span{
+            height:2px;
+            background:var(--main-color);
+            text-indent:-999999px;
+        }
+        .header .gnb{
+            display:none;
+        }
+
+
+
+
+
+        /* 768px 이상 */
+        @media (min-width:768px){
+
+        }
+
+
+
+
+        /* 1200px 이상 */
+        @media (min-width:1200px){
+            .header .btn-nav{
+                display:none;
+            }
+            .header .gnb{
+                display:block;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1><a href="./index.html">jo Portfolio</a></h1>
+                <div class="btn-nav">
+                    <span></span>
+                    <span>버튼</span>
+                    <span></span>
+                </div>
+                <nav class="gnb">
+                    <div class="btn-nav-close">&times;</div>
+                    <ul>
+                        <li><a href="#intro">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#design">design</a></li>
+                        <li><a href="#publishing">publishing</a></li>
+                        <li><a href="#video">video</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec sec01 intro" id="intro">
+            <div class="container">
+                <h2>intro</h2>
+                <video src="./media/rain.mp4" muted autoplay loop></video>
+            </div>
+        </section>
+        <section class="sec sec02 about" id="about">
+            <div class="container">
+                <h2>about</h2>
+            </div>
+        </section>
+        <section class="sec sec03 design" id="design">
+            <div class="container">
+                <h2>design</h2>
+            </div>
+        </section>
+        <section class="sec sec04 publishing" id="publishing">
+            <div class="container">
+                <h2>publishing</h2>
+            </div>
+        </section>
+        <section class="sec sec05 video" id="video">
+            <div class="container">
+                <h2>video</h2>
+            </div>
+        </section>
+        <footer class="footer contact" id="contact">
+            <div class="container">
+                <h2>contact</h2>
+            </div>
+        </footer>
+    </section>
+
+    <!-- vanilla JS -->
+    <script>
+
+    </script>
 </body>
 </html>
