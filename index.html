@@ -98,7 +98,7 @@
             padding:16px;
             background:var(--sub-color);
             color:var(--main-color);
-            /* transform:translateX(100%); */
+            transform:translateX(100%);
             transition:0.3s;
         }
         .header .gnb.active{
@@ -218,6 +218,28 @@
 
     <!-- vanilla JS -->
     <script>
+        function setClass(element,className){
+            element.classList.add(className);
+        }
+        function resetClass(element,className){
+            element.classList.remove(className);
+        }
+        function toggleClass(element,className){
+            element.classList.toggle(className);
+        }
+
+
+        let btnNav = document.querySelector('.btn-nav');
+        let btnNavClose = document.querySelector('.btn-nav-close');
+
+        btnNav.onclick=function(){
+            let gnb = document.querySelector('.gnb');
+            setClass(gnb,'active');
+        }
+        btnNavClose.onclick=function(){
+            let gnb = document.querySelector('.gnb');
+            resetClass(gnb,'active');
+        }
 
     </script>
 </body>
