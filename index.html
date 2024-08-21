@@ -54,7 +54,10 @@
             padding:16px 0;
             background:var(--sub-color);
             color:var(--main-color);
-            position:relative;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
             z-index:1000;
         }
         .header .container{
@@ -139,6 +142,11 @@
         }
 
 
+        .sec{
+            height:100vh;
+        }
+
+
         /* 768px 이상 */
         @media (min-width:768px){
 
@@ -217,7 +225,7 @@
                 <h2>video</h2>
             </div>
         </section>
-        <footer class="footer contact" id="contact">
+        <footer class="sec sec06 footer contact" id="contact">
             <div class="container">
                 <h2>contact</h2>
             </div>
@@ -238,12 +246,24 @@
 
 
         let btnNav = document.querySelector('.btn-nav');        
+        let navList = document.querySelectorAll('.gnb li');
 
         btnNav.onclick=function(){
             let gnb = document.querySelector('.gnb');            
             toggleClass(gnb,'active');
             toggleClass(this,'active');
         }
+
+        for(let idx=0;idx<=navList.length-1;idx++){
+            navList[idx].onclick = function(){
+                let gnb = document.querySelector('.gnb');
+                resetClass(gnb,'active');
+                resetClass(btnNav,'active');
+            }
+        }
+        
+        
+
         
 
     </script>
