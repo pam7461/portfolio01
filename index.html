@@ -355,21 +355,60 @@
             background:var(--sub-color);
         }
         .skill li::after{
-            width:80%;            
+            width:0;
             right:auto;            
             background:var(--main-color);
-            opacity:0.5;
+            opacity:0.5;            
         }
         .skill li:nth-child(1)::after{
+            transition:0.5s 0.5s;
+        }
+        .skill.swiper-slide-active li:nth-child(1)::after{
             width:100%;
         }
-        .skill li:nth-child(2)::after,
-        .skill li:nth-child(7)::after{
+        .skill li:nth-child(2)::after{
+            transition:0.5s 0.75s;
+        }
+        .skill.swiper-slide-active li:nth-child(2)::after{
             width:90%;
         }
+        .skill li:nth-child(3)::after{
+            transition:0.5s 1s;
+        }
+        .skill.swiper-slide-active li:nth-child(3)::after{
+            width:80%;
+        }
+        .skill li:nth-child(4)::after{
+            transition:0.5s 1.25s;
+        }
+        .skill.swiper-slide-active li:nth-child(4)::after{
+            width:80%;
+        }
+        .skill li:nth-child(5)::after{
+            transition:0.5s 1.5s;
+        }
+        .skill.swiper-slide-active li:nth-child(5)::after{
+            width:80%;
+        }
         .skill li:nth-child(6)::after{
+            transition:0.5s 1.75s;
+        }
+        .skill.swiper-slide-active li:nth-child(6)::after{
             width:60%;
         }
+        .skill li:nth-child(7)::after{
+            transition:0.5s 2s;
+        }
+        .skill.swiper-slide-active li:nth-child(7)::after{
+            width:90%;
+        }
+        .skill li:nth-child(8)::after{
+            transition:0.5s 2.25s;
+        }
+        .skill.swiper-slide-active li:nth-child(8)::after{
+            width:80%;
+        }
+        
         .skill h4{
             font-family: 'Garamond';
             font-size: 1.1em;
