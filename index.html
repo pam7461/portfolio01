@@ -177,6 +177,7 @@
             padding:120px 0;
         }
         .sec-tit{
+            margin-bottom:60px;
             font-family:'GaramondEB';
             font-weight:900;
             font-size:22px;
@@ -245,8 +246,49 @@
         }
 
 
-       
-       
+        /* ABOUT SECTION */
+        .profile{
+            position:relative;
+            display:grid;
+            gap:30px;
+        }
+        .profile h3{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            font-family:'UbuntuSansEB';
+            font-size:50px;            
+            color:rgba(255,255,255,0.2);
+        }
+        .profile>p{
+            text-align:center;
+            order:2;
+        }
+        .profile .img-box{
+            width:30%;
+            margin:0 auto;
+            order:1;
+        }
+        .profile ul{
+            width:70%;
+            margin:0 auto;
+            order:3;
+        }
+        .profile li{
+            margin-bottom:12px;            
+            display:grid;
+            grid-template-columns:1fr 3fr;
+        }
+        .profile h4{
+            font-family:'GaramondEB';
+            font-size:1.2em;
+            text-transform:uppercase;
+        }
+        .profile h4+p{
+            font-size:0.9em; 
+        }
+
         /* 768px 이상 */
         @media (min-width:768px){
             .sec-tit{
@@ -349,7 +391,7 @@
                         <li class="swiper-slide profile">
                             <h3>profile</h3>
                             <p>언제나 새로움을 추구하고 도전하는<br>웹디자이너 & 퍼블리셔가 되겠습니다.</p>
-                            <div class="img-box"><img src="" alt="홍길동"></div>
+                            <div class="img-box"><img src="./images/me.jpg" alt="홍길동"></div>
                             <ul>
                                 <li>
                                     <h4>name</h4>
