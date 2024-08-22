@@ -346,9 +346,31 @@
                 </div>
                 <article class="art sec-con about-con swiper">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide">프로필</li>
-                        <li class="swiper-slide">인포</li>
-                        <li class="swiper-slide">스킬</li>
+                        <li class="swiper-slide profile">
+                            <h3>profile</h3>
+                            <p>언제나 새로움을 추구하고 도전하는<br>웹디자이너 & 퍼블리셔가 되겠습니다.</p>
+                            <div class="img-box"><img src="" alt="홍길동"></div>
+                            <ul>
+                                <li>
+                                    <h4>name</h4>
+                                    <p>홍길동</p>
+                                </li>
+                                <li>
+                                    <h4>birth</h4>
+                                    <p>2000.01.01</p>
+                                </li>
+                                <li>
+                                    <h4>area</h4>
+                                    <p>인천광역시 서구</p>
+                                </li>
+                                <li>
+                                    <h4>email</h4>
+                                    <p>pam7461@gggg.com</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="swiper-slide info">인포</li>
+                        <li class="swiper-slide skill">스킬</li>
                     </ul>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -419,11 +441,7 @@
 
 
         // About swiper JS 
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,            
-
+        const aboutSwiper = new Swiper('.about-con', {            
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
