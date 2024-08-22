@@ -251,6 +251,7 @@
             position:relative;
             display:grid;
             gap:30px;
+            font-size:0.9em;
         }
         .profile h3{
             position:absolute;
@@ -278,7 +279,7 @@
         .profile li{
             margin-bottom:12px;            
             display:grid;
-            grid-template-columns:1fr 3fr;
+            grid-template-columns:120px 1fr;            
         }
         .profile h4{
             font-family:'GaramondEB';
@@ -308,7 +309,21 @@
                 grid-template-columns:1fr 2fr;
                 gap:60px;
             }
-            
+            .profile h3{
+                top:10%;
+                font-size:78px;
+            }
+            .profile>p{
+                padding-top:60px;
+                text-align:left;
+            }
+            .profile .img-box{
+                grid-area:1/1/3/2;
+                width:100%;
+            }
+            .profile ul{
+                width:100%;
+            }
 
         }
 
@@ -351,7 +366,18 @@
             .intro .vdo03{
                 display:block;
             }
-            
+            .profile h3{
+                left: 36%;
+                font-size:120px;
+                transform:translate(0,-50%);
+            }
+            .profile>p {
+                padding-top: 70px;
+                font-size: 1.6em;
+            }
+            .profile ul{
+                font-size:1.2em;
+            }
         }
     </style>
 </head>
