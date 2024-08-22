@@ -289,6 +289,13 @@
         .profile h4+p{
             font-size:0.9em; 
         }
+        .info h3{
+            display:none;
+        }
+        .info>ul{
+            display:grid;
+            gap:20px;
+        }
 
         /* 768px 이상 */
         @media (min-width:768px){
@@ -324,7 +331,16 @@
             .profile ul{
                 width:100%;
             }
-
+            .info>ul{
+                grid-template-columns:1fr 1fr;
+                gap:40px;
+            }
+            .info .education{
+                grid-area:1/1/3/2;
+            }
+            .info .career{
+                grid-area:2/2/3/-1;
+            }
         }
 
 
@@ -442,7 +458,58 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="swiper-slide info">인포</li>
+                        <li class="swiper-slide info">
+                            <h3>information</h3>
+                            <ul>
+                                <li class="education">
+                                    <h4>education</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>2018.02</h5>
+                                            <p>인천서고등학교 졸업</p>
+                                        </li>
+                                        <li>
+                                            <h5>2022.02</h5>
+                                            <p>인천서대학교 철학과 졸업</p>
+                                        </li>
+                                        <li>
+                                            <h5>2024.10</h5>
+                                            <p>인천IT직업능력개발학원<br>UI/UX 웹퍼블리싱&디자인, 영상이 결합된 웹 콘텐츠제작 양정과정 768시간 수료</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="career">
+                                    <h4>career</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>2022.03~2024.03</h5>
+                                            <p>검단철학관 상담실장 근무</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="license">
+                                    <h4>license</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>2020.04</h5>
+                                            <p>운전면허 1종 보통</p>
+                                        </li>
+                                        <li>
+                                            <h5>2021.06</h5>
+                                            <p>동양철학기사</p>
+                                        </li>
+                                        <li>
+                                            <h5>2024.06</h5>
+                                            <p>컴퓨터그래픽스운용기능사</p>
+                                        </li>
+                                        <li>
+                                            <h5>2024.08</h5>
+                                            <p>GTQ 1급<br>GTQi 2급</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="swiper-slide skill">스킬</li>
                     </ul>
                     <div class="swiper-button-prev"></div>
