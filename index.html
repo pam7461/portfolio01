@@ -417,6 +417,23 @@
             font-size:0.9em;
         }
 
+        .contact ul{
+            width:240px;
+            margin:0 auto;
+            display:grid;            
+            gap:60px;
+            font-size:0.9em;
+        }
+
+
+
+        @media (min-width:560px){
+            .contact ul{
+                font-size:1.1em;
+            }
+        }
+
+
 
         /* 768px 이상 */
         @media (min-width:768px){
@@ -481,6 +498,13 @@
             .skill li::before,
             .skill li::after{
                 height:16px;
+            }
+            .contact ul{
+                width:740px;
+                grid-template-columns:1fr 1fr;
+            }
+            .contact li:last-child{
+                grid-area:2/1/3/-1;
             }
         }
 
@@ -726,7 +750,23 @@
             <div class="container">
                 <div class="sec-tit">
                     <h2>contact</h2>
-                </div>                
+                </div> 
+                <article class="art sec-con contact-con">
+                    <ul>
+                        <li>
+                            <h3>E-Mail</h3>
+                            <p>pam7461@kkkkk.com</p>
+                        </li>
+                        <li>
+                            <h3>Kakao Talk</h3>
+                            <div class="img-box"><img src="./images/KakaoTalk.jpg" alt="kakao QR"></div>
+                        </li>
+                        <li>
+                            <p>이 사이트는 영리 목족의 상업적 용도가 아닌 개인 교육용 포트폴리오로 제작되었습니다.</p>
+                            <address>Copyright 2024 by Hong Gildong</address>
+                        </li>                        
+                    </ul>
+                </article>               
             </div>
         </footer>
     </section>
