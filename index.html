@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <title>HWANJUN Portfolio</title>
     <style>
         /* mobile CSS */
@@ -342,7 +343,16 @@
             <div class="container">
                 <div class="sec-tit">
                     <h2>about</h2>
-                </div>                
+                </div>
+                <article class="art sec-con about-con swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">프로필</li>
+                        <li class="swiper-slide">인포</li>
+                        <li class="swiper-slide">스킬</li>
+                    </ul>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </article>
             </div>
         </section>
         <section class="sec sec03 design" id="design">
@@ -375,6 +385,8 @@
         </footer>
     </section>
 
+    <!-- swiperJS -->
+    <script src="./js/swiper-bundle.min.js"></script>
     <!-- vanilla JS -->
     <script>
         function setClass(element,className){
@@ -406,6 +418,18 @@
         }
 
 
+        // About swiper JS 
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,            
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
 
     </script>
 </body>
