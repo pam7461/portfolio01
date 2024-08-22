@@ -175,6 +175,9 @@
             height:100vh;
             padding:120px 0;
         }
+        .intro{
+            padding:65px 0 0 0;
+        }
         .intro .container{
             max-width:100%;
             height:100%;
@@ -213,8 +216,32 @@
             font-family:'GaramondEB';
             font-weight:900;
             font-size:22px;
+            text-transform:capitalize;
+            position:relative;
         }
-
+        .sec-tit::before{
+            content:'';
+            display:block;
+            width: 300px;
+            height: 25px;
+            background: #999;
+            position: absolute;
+            right: calc(100% - 29px);
+            top: -6px;
+            z-index: 1;
+        }
+        .sec-tit h2{
+            position:relative;
+            z-index:2;
+            margin-bottom:12px;
+        }
+        .sec-tit::after{
+            content:'';
+            display:block;
+            width:2000px;
+            height:1px;
+            background:var(--sub-color);            
+        }
        
         /* 768px 이상 */
         @media (min-width:768px){
@@ -225,7 +252,11 @@
                 display:block;
             }
             .sec-tit{
-                font-size:28px;
+                font-size:32px;
+            }
+            .sec-tit::before{
+                right: calc(100% - 48px);
+                top: 1px;
             }
         }
 
@@ -260,7 +291,13 @@
                 display:block;
             }
             .sec-tit{
-                font-size:36px;
+                font-size:48px;
+            }
+            .sec-tit::before{
+                width: 450px;
+                height: 55px;
+                right: calc(100% - 78px);
+                top: -13px;
             }
         }
     </style>
