@@ -343,7 +343,8 @@
             justify-content:space-between;
             position:relative;
         }
-        .skill li::before{
+        .skill li::before,
+        .skill li::after{
             content:'';
             display:block;
             position:absolute;
@@ -354,13 +355,8 @@
             background:var(--sub-color);
         }
         .skill li::after{
-            content:'';
-            display:block;
-            position:absolute;
-            width:80%;
-            height:10px;
-            left:0;
-            top:100%;
+            width:80%;            
+            right:auto;            
             background:var(--main-color);
             opacity:0.5;
         }
@@ -441,7 +437,11 @@
             .skill ul{
                 grid-template-columns:1fr 1fr;
                 column-gap:80px;
-                row-gap:60px;
+                row-gap:80px;
+            }
+            .skill li::before,
+            .skill li::after{
+                height:16px;
             }
         }
 
