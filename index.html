@@ -247,6 +247,10 @@
 
 
         /* ABOUT SECTION */
+        .swiper-button-next::after, .swiper-button-prev::after{
+            font-size:20px;
+            color:var(--sub-color);
+        }
         .profile{
             position:relative;
             display:grid;
@@ -289,6 +293,9 @@
         .profile h4+p{
             font-size:0.9em; 
         }
+        .info{
+            padding:0 40px;
+        }
         .info h3{
             display:none;
         }
@@ -296,6 +303,23 @@
             display:grid;
             gap:20px;
         }
+        .info h4{
+            margin-bottom:0.5em;
+            font-family:'Garamond';
+            font-size:1.1em;
+            text-transform:uppercase;
+        }
+        .info h5{
+            font-size:0.8em;
+            opacity:0.6;
+        }
+        .info h5+p{
+            margin-bottom:0.4em;
+            font-size:0.9em;
+        }
+
+
+
 
         /* 768px 이상 */
         @media (min-width:768px){
@@ -306,6 +330,7 @@
                 right: calc(100% - 48px);
                 top: 1px;
             }
+            
             .intro .vdo01{
                 display:none;
             }
@@ -330,6 +355,10 @@
             }
             .profile ul{
                 width:100%;
+            }
+            .info{
+                padding:0 60px;
+                font-size:1.2em;
             }
             .info>ul{
                 grid-template-columns:1fr 1fr;
@@ -375,6 +404,9 @@
                 height: 55px;
                 right: calc(100% - 78px);
                 top: -13px;
+            }
+            .info{
+                padding:0 100px;
             }
             .intro .vdo02{
                 display:none;
