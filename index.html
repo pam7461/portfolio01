@@ -317,7 +317,30 @@
             margin-bottom:0.4em;
             font-size:0.9em;
         }
-
+        .skill{
+            position: relative;
+            padding:0 40px;
+        }
+        .skill h3{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            z-index:1;
+            font-family:'UbuntuSansEB';
+            font-size:25vw;
+            opacity:0.1;
+            text-transform:capitalize;
+        }
+        .skill ul{
+            display:grid;
+            gap:60px;
+        }
+        .skill li{
+            display:grid;
+            grid-template-columns:auto auto;
+            justify-content:space-between;
+        }
 
 
 
@@ -329,8 +352,7 @@
             .sec-tit::before{
                 right: calc(100% - 48px);
                 top: 1px;
-            }
-            
+            }            
             .intro .vdo01{
                 display:none;
             }
@@ -369,6 +391,15 @@
             }
             .info .career{
                 grid-area:2/2/3/-1;
+            }
+            .skill{
+                padding:0 60px;
+            }
+            .skill h3{
+                font-size:200px;
+            }
+            .skill ul{
+                grid-template-columns:1fr 1fr;
             }
         }
 
@@ -425,6 +456,9 @@
             }
             .profile ul{
                 font-size:1.2em;
+            }
+            .skill{
+                padding:0 100px;
             }
         }
     </style>
@@ -542,7 +576,43 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="swiper-slide skill">스킬</li>
+                        <li class="swiper-slide skill">
+                            <h3>skills</h3>
+                            <ul>
+                                <li>
+                                    <h4>HTML5</h4>
+                                    <p>100%</p>
+                                </li>
+                                <li>
+                                    <h4>CSS3</h4>
+                                    <p>90%</p>
+                                </li>
+                                <li>
+                                    <h4>javaScript</h4>
+                                    <p>80%</p>
+                                </li>
+                                <li>
+                                    <h4>jQuery</h4>
+                                    <p>80%</p>
+                                </li>
+                                <li>
+                                    <h4>Photoshop</h4>
+                                    <p>80%</p>
+                                </li>
+                                <li>
+                                    <h4>Illustator</h4>
+                                    <p>60%</p>
+                                </li>
+                                <li>
+                                    <h4>Visual Studio Code</h4>
+                                    <p>90%</p>
+                                </li>
+                                <li>
+                                    <h4>gitHub</h4>
+                                    <p>80%</p>
+                                </li>                                
+                            </ul>
+                        </li>
                     </ul>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
