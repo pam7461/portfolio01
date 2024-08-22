@@ -421,12 +421,35 @@
             width:240px;
             margin:0 auto;
             display:grid;            
-            gap:60px;
+            row-gap:60px;
             font-size:0.9em;
+        }
+        .contact h3{
+            font-family:'Garamond';
+            font-size:1.5em;
+            text-align:center;
+        }
+        .contact h3+p{
+            font-size:0.9em;
+            text-align:center;
+        }
+        .contact h3+.img-box{
+            max-width:240px;
+            margin:0 auto;
+        }
+        .contact li:last-child  p{
+            font-size:0.8em;
+            text-align:center;
+            margin-bottom:1em;
+        }
+        .contact address{
+            font-size:0.8em;
+            text-align:center;
         }
 
 
 
+        /* 560px 이상 */
         @media (min-width:560px){
             .contact ul{
                 font-size:1.1em;
@@ -505,7 +528,7 @@
             }
             .contact li:last-child{
                 grid-area:2/1/3/-1;
-            }
+            }            
         }
 
 
