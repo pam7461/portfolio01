@@ -1308,6 +1308,7 @@
         let designList = document.querySelectorAll('.design .port-tab li');
         let publishingList = document.querySelectorAll('.publishing .port-tab li');
         let videoList = document.querySelectorAll('.video .port-tab li');
+        let bannerList = document.querySelectorAll('.banner-list a');
         
         
         btnNav.onclick=function(){
@@ -1327,34 +1328,22 @@
         // disign list
         for(let node of designList){
             node.onclick = function(){
-                changePort(designList,'design',this);
-                // for(let node of designList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(this,'active');
-                // let acIdx = this.getAttribute('data-idx');
-                // let portList = document.querySelectorAll('.design .port-list');
-                // for(let node of portList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(portList[acIdx],'active');
+                changePort(designList,'design',this);                
             }
         }
+        // disign > banner list
+        for(let node of bannerList){
+            node.onclick = function(e){
+                setClass(this.nextElementSibling,'active');
+                e.preventDefault();
+            }
+        }
+
 
         // publishing list
         for(let node of publishingList){
             node.onclick = function(){
-                changePort(publishingList,'publishing',this);
-                // for(let node of publishingList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(this,'active');
-                // let acIdx = this.getAttribute('data-idx');
-                // let portList = document.querySelectorAll('.publishing .port-list');
-                // for(let node of portList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(portList[acIdx],'active');
+                changePort(publishingList,'publishing',this);                
             }
         }
 
@@ -1362,17 +1351,7 @@
         // video list
         for(let node of videoList){
             node.onclick = function(){
-                changePort(videoList,'video',this);
-                // for(let node of videoList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(this,'active');
-                // let acIdx = this.getAttribute('data-idx');
-                // let portList = document.querySelectorAll('.video .port-list');
-                // for(let node of portList){
-                //     resetClass(node,'active');
-                // }
-                // setClass(portList[acIdx],'active');
+                changePort(videoList,'video',this);                
             }
         }
 
