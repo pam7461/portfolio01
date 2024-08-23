@@ -439,6 +439,24 @@
                 font-size:0.9em;
             }
 
+            /* PORT SECTION */
+            .port-tab{
+                margin-bottom:36px;
+                display:flex;
+                flex-flow:row nowrap;
+                justify-content: center;
+            }
+            .port-tab li{
+                margin:0 16px;
+                font-weight:700;
+                font-size:1.2em;
+                text-transform:capitalize;
+                cursor:pointer;
+                border-bottom:1px solid transparent;
+            }
+            .port-tab li:hover,.port-tab li.active{
+                border-bottom-color:#999;
+            }
             
             /* DESIGN SECTION */
             .design{
@@ -567,6 +585,15 @@
             .contact li:last-child{
                 grid-area:2/1/3/-1;
             }            
+            .port-tab li {
+                margin:0;
+                border: 1px solid transparent;
+                padding:0 16px;
+                font-size: 1.4em;                
+            }
+            .port-tab li:hover,.port-tab li.active{
+                border-color:#999;
+            }
         }
 
 
@@ -791,7 +818,7 @@
                 </div>   
                 <article class="art sec-con port-con design-con">
                     <ul class="port-tab design-tab">
-                        <li>banner</li>
+                        <li class="active">banner</li>
                         <li>detail</li>
                         <li>draft</li>
                         <li>etc</li>
@@ -838,7 +865,7 @@
                 </div>                
                 <article class="art sec-con port-con publishing-con">
                     <ul class="port-tab publishing-tab">
-                        <li>mobile</li>
+                        <li class="active">mobile</li>
                         <li>desktop</li>
                         <li>responsive</li>
                     </ul>
@@ -873,7 +900,38 @@
             <div class="container">
                 <div class="sec-tit">
                     <h2>video</h2>
-                </div>                
+                </div> 
+                <article class="art sec-con port-con video-con">
+                    <ul class="port-tab video-tab">
+                        <li class="active">video1</li>
+                        <li>video2</li>
+                        <li>video3</li>
+                    </ul>
+                    <ul class="port-list video1-list">
+                        <li><a href="#">video1-01</a></li>
+                        <li><a href="#">video1-02</a></li>
+                        <li><a href="#">video1-03</a></li>
+                        <li><a href="#">video1-04</a></li>
+                        <li><a href="#">video1-05</a></li>
+                        <li><a href="#">video1-06</a></li>
+                    </ul>
+                    <ul class="port-list video2-list">
+                        <li><a href="#">video2-01</a></li>
+                        <li><a href="#">video2-02</a></li>
+                        <li><a href="#">video2-03</a></li>
+                        <li><a href="#">video2-04</a></li>
+                        <li><a href="#">video2-05</a></li>
+                        <li><a href="#">video2-06</a></li>
+                    </ul>
+                    <ul class="port-list video3-list">
+                        <li><a href="#">video3-01</a></li>
+                        <li><a href="#">video3-02</a></li>
+                        <li><a href="#">video3-03</a></li>
+                        <li><a href="#">video3-04</a></li>
+                        <li><a href="#">video3-05</a></li>
+                        <li><a href="#">video3-06</a></li>
+                    </ul>
+                </article>               
             </div>
         </section>
         <footer class="sec sec06 footer contact" id="contact">
