@@ -484,8 +484,7 @@
                 font-size:0.9em;
                 text-align:center;
             }
-            .port-list li .img-box{
-                overflow:hidden;
+            .port-list li .img-box{                
                 perspective:800px;
             }
             .port-list li .img-box img{
@@ -494,6 +493,35 @@
             }
             .port-list li:hover .img-box img{
                 transform:rotateY(0deg);
+            }
+            .port-item{
+                display:none;
+                position:fixed;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                background:rgba(0,0,0,0.5); 
+                z-index:9999;               
+            }
+            .port-item.active{
+                display:block;
+            }
+            .port-item .btn-close{
+                position:absolute;
+                right:20px;
+                top:20px;
+                font-size:3em;
+                color:var(--sub-color);
+                cursor:pointer;
+            }
+            .port-item .port-item-img{
+                width:88%;
+                max-width:640px;
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform:translate(-50%,-50%);
             }
             
             
@@ -906,6 +934,10 @@
                                 <p>banner01의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner01.jpg" alt="banner01"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner01.jpg" alt="banner01"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -913,6 +945,10 @@
                                 <p>banner02의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner02.jpg" alt="banner02"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner02.jpg" alt="banner02"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -920,6 +956,10 @@
                                 <p>banner03의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner03.jpg" alt="banner03"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner03.jpg" alt="banner03"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -927,6 +967,10 @@
                                 <p>banner04의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner04.jpg" alt="banner04"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner04.jpg" alt="banner04"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -934,6 +978,10 @@
                                 <p>banner05의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner05.jpg" alt="banner05"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner05.jpg" alt="banner05"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -941,6 +989,10 @@
                                 <p>banner06의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-banner06.jpg" alt="banner06"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/banner06.jpg" alt="banner06"></div>
+                            </div>
                         </li>
                     </ul>
                     <ul class="port-list detail-list">
@@ -1256,6 +1308,7 @@
         let designList = document.querySelectorAll('.design .port-tab li');
         let publishingList = document.querySelectorAll('.publishing .port-tab li');
         let videoList = document.querySelectorAll('.video .port-tab li');
+        
         
         btnNav.onclick=function(){
             let gnb = document.querySelector('.gnb');            
