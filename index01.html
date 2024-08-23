@@ -207,7 +207,7 @@
             }
             .sec.active{
                 z-index:2;
-                opacity:1;                
+                opacity:1;
             }
             .sec-tit{
                 margin-bottom:60px;
@@ -871,7 +871,10 @@
                 e.preventDefault();
                 let acSecIdx = this.getAttribute('data-idx');
                 let allSec = document.querySelectorAll('.sec');
-                console.log(allSec[acSecIdx]);
+                for(let node of allSec){
+                    resetClass(node,'active');
+                }
+                setClass(allSec[acSecIdx],'active');
             }
         }
 
