@@ -440,6 +440,9 @@
             }
 
             /* PORT SECTION */
+            .port{
+                height:auto;
+            }
             .port-tab{
                 margin-bottom:36px;
                 display:flex;
@@ -459,9 +462,15 @@
             }
             .port-list{
                 display:none;
+                grid-template-columns:1fr 152px 152px 1fr;                
+                column-gap:16px;
+                row-gap:16px;
             }
             .port-list.active{
-                display:block;
+                display:grid;
+            }
+            .port-list li{
+                grid-column:2/4;
             }
             
             /* DESIGN SECTION */
