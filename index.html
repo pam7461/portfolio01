@@ -462,8 +462,7 @@
             }
             .port-list{
                 display:none;
-                grid-template-columns:1fr 152px 152px 1fr;                
-                column-gap:16px;
+                grid-template-columns:1fr 160px 160px 1fr; 
                 row-gap:16px;
             }
             .port-list.active{
@@ -609,8 +608,33 @@
             .port-tab li:hover,.port-tab li.active{
                 border-color:#999;
             }
+            .port-list{
+                grid-template-columns:repeat(8,1fr);
+                column-gap:16px;
+            }
+            .port-list li:nth-child(2n+1){
+                grid-column:1/5;
+            }
+            .port-list li:nth-child(2n){
+                grid-column:5/-1;
+            }
         }
 
+        /* 960px 이상 */
+        @media (min-width:960px){
+            .port-list{
+                grid-template-columns:repeat(12,1fr);                
+            }
+            .port-list li:nth-child(3n+1){
+                grid-column:1/5;
+            }
+            .port-list li:nth-child(3n+2){
+                grid-column:5/9;
+            }
+            .port-list li:nth-child(3n){
+                grid-column:9/-1;
+            }
+        }
 
         /* 1200px 이상 */
         @media (min-width:1200px){
@@ -666,6 +690,18 @@
             .skill{
                 padding:0 100px;
                 font-size:1.2em;
+            }            
+            .port-list li:nth-child(4n+1){
+                grid-column:1/4;
+            }
+            .port-list li:nth-child(4n+2){
+                grid-column:4/7;
+            }
+            .port-list li:nth-child(4n+3){
+                grid-column:7/10;
+            }
+            .port-list li:nth-child(4n){
+                grid-column:10/-1;
             }
         }
     </style>
