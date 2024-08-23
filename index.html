@@ -443,8 +443,11 @@
             .port{
                 height:auto;
             }
+            .port .sec-tit{
+                margin-bottom:100px;
+            }
             .port-tab{
-                margin-bottom:36px;
+                margin-bottom:100px;
                 display:flex;
                 flex-flow:row nowrap;
                 justify-content: center;
@@ -463,7 +466,7 @@
             .port-list{
                 display:none;
                 grid-template-columns:1fr 160px 160px 1fr; 
-                row-gap:16px;
+                row-gap:64px;
             }
             .port-list.active{
                 display:grid;
@@ -471,6 +474,28 @@
             .port-list li{
                 grid-column:2/4;
             }
+            .port-list li h3{
+                font-size:1.2em;
+                text-align:center;
+                text-transform:capitalize;
+            }
+            .port-list li p{  
+                margin-bottom:12px;              
+                font-size:0.9em;
+                text-align:center;
+            }
+            .port-list li .img-box{
+                overflow:hidden;
+                perspective:800px;
+            }
+            .port-list li .img-box img{
+                transform:rotateY(180deg);
+                transition:0.5s;                
+            }
+            .port-list li:hover .img-box img{
+                transform:rotateY(0deg);
+            }
+            
             
             /* DESIGN SECTION */
             .design{
@@ -610,7 +635,7 @@
             }
             .port-list{
                 grid-template-columns:repeat(8,1fr);
-                column-gap:16px;
+                column-gap:32px;
             }
             .port-list li:nth-child(2n+1){
                 grid-column:1/5;
