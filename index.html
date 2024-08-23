@@ -818,10 +818,10 @@
                 </div>   
                 <article class="art sec-con port-con design-con">
                     <ul class="port-tab design-tab">
-                        <li class="active">banner</li>
-                        <li>detail</li>
-                        <li>draft</li>
-                        <li>etc</li>
+                        <li data-idx="0" class="active">banner</li>
+                        <li data-idx="1">detail</li>
+                        <li data-idx="2">draft</li>
+                        <li data-idx="3">etc</li>
                     </ul>
                     <ul class="port-list banner-list">
                         <li><a href="#">banner01</a></li>
@@ -865,9 +865,9 @@
                 </div>                
                 <article class="art sec-con port-con publishing-con">
                     <ul class="port-tab publishing-tab">
-                        <li class="active">mobile</li>
-                        <li>desktop</li>
-                        <li>responsive</li>
+                        <li data-idx="0" class="active">mobile</li>
+                        <li data-idx="1">desktop</li>
+                        <li data-idx="2">responsive</li>
                     </ul>
                     <ul class="port-list mobile-list">
                         <li><a href="#">mobile01</a></li>
@@ -903,9 +903,9 @@
                 </div> 
                 <article class="art sec-con port-con video-con">
                     <ul class="port-tab video-tab">
-                        <li class="active">video1</li>
-                        <li>video2</li>
-                        <li>video3</li>
+                        <li data-idx="0" class="active">video1</li>
+                        <li data-idx="1">video2</li>
+                        <li data-idx="2">video3</li>
                     </ul>
                     <ul class="port-list video1-list">
                         <li><a href="#">video1-01</a></li>
@@ -976,7 +976,10 @@
 
         let btnNav = document.querySelector('.btn-nav');        
         let navList = document.querySelectorAll('.gnb li');
-
+        let designList = document.querySelectorAll('.design .port-tab li');
+        let publishingList = document.querySelectorAll('.publishing .port-tab li');
+        let videoList = document.querySelectorAll('.video .port-tab li');
+        
         btnNav.onclick=function(){
             let gnb = document.querySelector('.gnb');            
             toggleClass(gnb,'active');
@@ -990,6 +993,38 @@
                 resetClass(btnNav,'active');
             }
         }
+
+        // disign list
+        for(let node of designList){
+            node.onclick = function(){
+                for(let node of designList){
+                    resetClass(node,'active');
+                }
+                setClass(this,'active');
+            }
+        }
+
+        // publishing list
+        for(let node of publishingList){
+            node.onclick = function(){
+                for(let node of publishingList){
+                    resetClass(node,'active');
+                }
+                setClass(this,'active');
+            }
+        }
+
+
+        // video list
+        for(let node of videoList){
+            node.onclick = function(){
+                for(let node of videoList){
+                    resetClass(node,'active');
+                }
+                setClass(this,'active');
+            }
+        }
+
 
 
         // About swiper JS 
