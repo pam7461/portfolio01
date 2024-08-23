@@ -457,6 +457,12 @@
             .port-tab li:hover,.port-tab li.active{
                 border-bottom-color:#999;
             }
+            .port-list{
+                display:none;
+            }
+            .port-list.active{
+                display:block;
+            }
             
             /* DESIGN SECTION */
             .design{
@@ -823,7 +829,7 @@
                         <li data-idx="2">draft</li>
                         <li data-idx="3">etc</li>
                     </ul>
-                    <ul class="port-list banner-list">
+                    <ul class="port-list banner-list active">
                         <li><a href="#">banner01</a></li>
                         <li><a href="#">banner02</a></li>
                         <li><a href="#">banner03</a></li>
@@ -869,7 +875,7 @@
                         <li data-idx="1">desktop</li>
                         <li data-idx="2">responsive</li>
                     </ul>
-                    <ul class="port-list mobile-list">
+                    <ul class="port-list mobile-list active">
                         <li><a href="#">mobile01</a></li>
                         <li><a href="#">mobile02</a></li>
                         <li><a href="#">mobile03</a></li>
@@ -907,7 +913,7 @@
                         <li data-idx="1">video2</li>
                         <li data-idx="2">video3</li>
                     </ul>
-                    <ul class="port-list video1-list">
+                    <ul class="port-list video1-list active">
                         <li><a href="#">video1-01</a></li>
                         <li><a href="#">video1-02</a></li>
                         <li><a href="#">video1-03</a></li>
@@ -1001,6 +1007,12 @@
                     resetClass(node,'active');
                 }
                 setClass(this,'active');
+                let acIdx = this.getAttribute('data-idx');
+                let portList = document.querySelectorAll('.design .port-list');
+                for(let node of portList){
+                    resetClass(node,'active');
+                }
+                setClass(portList[acIdx],'active');
             }
         }
 
@@ -1011,6 +1023,12 @@
                     resetClass(node,'active');
                 }
                 setClass(this,'active');
+                let acIdx = this.getAttribute('data-idx');
+                let portList = document.querySelectorAll('.publishing .port-list');
+                for(let node of portList){
+                    resetClass(node,'active');
+                }
+                setClass(portList[acIdx],'active');
             }
         }
 
@@ -1022,6 +1040,12 @@
                     resetClass(node,'active');
                 }
                 setClass(this,'active');
+                let acIdx = this.getAttribute('data-idx');
+                let portList = document.querySelectorAll('.video .port-list');
+                for(let node of portList){
+                    resetClass(node,'active');
+                }
+                setClass(portList[acIdx],'active');
             }
         }
 
