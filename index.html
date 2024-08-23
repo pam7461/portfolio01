@@ -978,6 +978,18 @@
         function toggleClass(element,className){
             element.classList.toggle(className);
         }
+        function changePort(triNodeList,secName,self){
+            for(let node of triNodeList){
+                resetClass(node,'active');
+            }
+            setClass(self,'active');
+            let acIdx = self.getAttribute('data-idx');
+            let portList = document.querySelectorAll(`.${secName} .port-list`);
+            for(let node of portList){
+                resetClass(node,'active');
+            }
+            setClass(portList[acIdx],'active');
+        }
 
 
         let btnNav = document.querySelector('.btn-nav');        
@@ -1003,32 +1015,34 @@
         // disign list
         for(let node of designList){
             node.onclick = function(){
-                for(let node of designList){
-                    resetClass(node,'active');
-                }
-                setClass(this,'active');
-                let acIdx = this.getAttribute('data-idx');
-                let portList = document.querySelectorAll('.design .port-list');
-                for(let node of portList){
-                    resetClass(node,'active');
-                }
-                setClass(portList[acIdx],'active');
+                changePort(designList,'design',this);
+                // for(let node of designList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(this,'active');
+                // let acIdx = this.getAttribute('data-idx');
+                // let portList = document.querySelectorAll('.design .port-list');
+                // for(let node of portList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(portList[acIdx],'active');
             }
         }
 
         // publishing list
         for(let node of publishingList){
             node.onclick = function(){
-                for(let node of publishingList){
-                    resetClass(node,'active');
-                }
-                setClass(this,'active');
-                let acIdx = this.getAttribute('data-idx');
-                let portList = document.querySelectorAll('.publishing .port-list');
-                for(let node of portList){
-                    resetClass(node,'active');
-                }
-                setClass(portList[acIdx],'active');
+                changePort(publishingList,'publishing',this);
+                // for(let node of publishingList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(this,'active');
+                // let acIdx = this.getAttribute('data-idx');
+                // let portList = document.querySelectorAll('.publishing .port-list');
+                // for(let node of portList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(portList[acIdx],'active');
             }
         }
 
@@ -1036,16 +1050,17 @@
         // video list
         for(let node of videoList){
             node.onclick = function(){
-                for(let node of videoList){
-                    resetClass(node,'active');
-                }
-                setClass(this,'active');
-                let acIdx = this.getAttribute('data-idx');
-                let portList = document.querySelectorAll('.video .port-list');
-                for(let node of portList){
-                    resetClass(node,'active');
-                }
-                setClass(portList[acIdx],'active');
+                changePort(videoList,'video',this);
+                // for(let node of videoList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(this,'active');
+                // let acIdx = this.getAttribute('data-idx');
+                // let portList = document.querySelectorAll('.video .port-list');
+                // for(let node of portList){
+                //     resetClass(node,'active');
+                // }
+                // setClass(portList[acIdx],'active');
             }
         }
 
