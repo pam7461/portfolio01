@@ -518,6 +518,9 @@
             .port-item .port-item-img{
                 width:88%;
                 max-width:640px;
+                height:auto;
+                max-height:70vh;
+                overflow:auto;
                 position:absolute;
                 left:50%;
                 top:50%;
@@ -1002,6 +1005,10 @@
                                 <p>detail01의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-detail01.jpg" alt="detail01"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/detail01.jpg" alt="detail01"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -1009,6 +1016,10 @@
                                 <p>detail02의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-detail02.jpg" alt="detail02"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/detail02.jpg" alt="detail02"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -1016,6 +1027,10 @@
                                 <p>detail03의 내용들</p>
                                 <div class="img-box"><img src="./images/thum-detail03.jpg" alt="detail03"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/detail03.jpg" alt="detail03"></div>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -1023,6 +1038,10 @@
                                 <p>detail04 내용들</p>
                                 <div class="img-box"><img src="./images/thum-detail04.jpg" alt="detail04"></div>
                             </a>
+                            <div class="port-item modal">
+                                <div class="btn-close">&times;</div>
+                                <div class="port-item-img"><img src="./images/detail04.jpg" alt="detail04"></div>
+                            </div>
                         </li>
                     </ul>
                     <ul class="port-list draft-list">
@@ -1308,7 +1327,9 @@
         let designList = document.querySelectorAll('.design .port-tab li');
         let publishingList = document.querySelectorAll('.publishing .port-tab li');
         let videoList = document.querySelectorAll('.video .port-tab li');
-        let bannerList = document.querySelectorAll('.banner-list a');
+        let portList = document.querySelectorAll('.port-list a');
+        let modalClostList = document.querySelectorAll('.modal .btn-close');
+        
         
         
         btnNav.onclick=function(){
@@ -1331,12 +1352,19 @@
                 changePort(designList,'design',this);                
             }
         }
-        
-        // disign > banner list
-        for(let node of bannerList){
+
+        // disign > port list
+        for(let node of portList){
             node.onclick = function(e){
                 setClass(this.nextElementSibling,'active');
                 e.preventDefault();
+            }
+        }
+
+        // modal close
+        for(let node of modalClostList){
+            node.onclick = function(){                
+                resetClass(this.parentElement,'active');                
             }
         }
 
